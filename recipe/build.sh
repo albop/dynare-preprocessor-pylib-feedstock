@@ -15,8 +15,8 @@ fi
 
 meson setup --prefix=$PREFIX --bindir=$PREFIX/bin --libdir=$PREFIX/lib --includedir=$PREFIX/include \
     --buildtype=release build_preproc \
-    -Dcpp_args="-w  -Wno-enum-constexpr-conversion"  \
-    -Dcpp_link_args="-w  -Wno-enum-constexpr-conversion" \
+    -Dcpp_args="-w  -Wno-enum-constexpr-conversion -fexperimental"  \
+    -Dcpp_link_args="-w  -Wno-enum-constexpr-conversion -fexperimental" \
     -Dbuild_library="enabled"
 
 meson compile -C build_preproc
